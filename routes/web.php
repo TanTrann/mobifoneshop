@@ -51,7 +51,27 @@ Route::get('/active-brand/{brand_id}','App\Http\Controllers\BrandController@acti
 
 
 
+//backend + Product
+Route::get('/add-product','App\Http\Controllers\productController@add_product');
+Route::get('/all-product','App\Http\Controllers\productController@all_product');
+Route::get('/edit-product/{product_id}','App\Http\Controllers\productController@edit_product');
+Route::post('/save-product','App\Http\Controllers\productController@save_product');
+Route::post('/update-product/{product_id}','App\Http\Controllers\productController@update_product');
+Route::get('/delete-product/{product_id}','App\Http\Controllers\productController@delete_product');
 
+Route::get('/unactive-product/{product_id}','App\Http\Controllers\productController@unactive_product');
+Route::get('/active-product/{product_id}','App\Http\Controllers\productController@active_product');
+
+//backend + service
+Route::get('/add-serv','App\Http\Controllers\ServiceController@add_service');
+Route::get('/all-serv','App\Http\Controllers\ServiceController@all_service');
+Route::get('/edit-service/{service_id}','App\Http\Controllers\ServiceController@edit_service');
+Route::post('/save-service','App\Http\Controllers\ServiceController@save_service');
+Route::post('/update-service/{service_id}','App\Http\Controllers\ServiceController@update_service');
+Route::get('/delete-service/{service_id}','App\Http\Controllers\ServiceController@delete_service');
+
+Route::get('/unactive-service/{service_id}','App\Http\Controllers\ServiceController@unactive_service');
+Route::get('/active-service/{service_id}','App\Http\Controllers\ServiceController@active_service');
 
 //backend + data_service
 Route::get('/add-data-service','App\Http\Controllers\DataServiceController@add_data_service');
@@ -76,3 +96,6 @@ Route::get('/delete-call-service/{call_service_id}','App\Http\Controllers\CallSe
 Route::get('/unactive-call-service/{call_service_id}','App\Http\Controllers\CallServiceController@unactive_call_service');
 Route::get('/active-call-service/{call_service_id}','App\Http\Controllers\CallServiceController@active_call_service');
 
+//frontend + product
+
+Route::get('/product','App\Http\Controllers\productController@product');
