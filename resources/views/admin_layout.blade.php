@@ -184,8 +184,8 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="">Liệt kê</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Thêm</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{URL('/all-product')}}">Liệt kê</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{URL('/add-product')}}">Thêm</a></li>
               </ul>
             </div>
           </li>

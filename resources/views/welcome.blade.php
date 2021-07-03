@@ -8,7 +8,8 @@
         <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
-        <link href="{{asset('public/backend/images/favicon.png')}}" rel="icon">
+   
+  <link rel="shortcut icon" href="{{asset('public/backend/images/favicon.png')}}" />
 
         <!-- Google Font -->
         <link href="{{asset('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap')}}" rel="stylesheet">
