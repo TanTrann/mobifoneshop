@@ -181,12 +181,12 @@
             <div class="row" id="best-products">
 
                 <div class="new-product owl-carousel service-carousel" >
-  
+                @foreach($all_product as $key =>$pro)
                     <div class="product-card" >
                   
                         <div class="product-card-img">
                         
-                        <img src="">>
+                        <img src="public/uploads/products/{{$pro->product_images}}">>
                            
                         </div>
                         <div class="product-card-info">
@@ -201,24 +201,24 @@
                             </div>
                           
                             <div class="product-card-name">
-                            
+                            {{$pro ->product_name}}
                             </div>
                             <div class="product-card-price">
                                 <span><del>$300</del></span>
-                                <span class="curr-price"> </span>
+                                <span class="curr-price">{{ number_format($pro->product_price,0,',','.') }}vnd </span>
                             </div>
                           
                         </div>
                        
                     </div>
-              
+                    @endforeach
                     
                     
                     </div>
                 </div>
             </div>
             <div class="section-footer">
-                <a href="./products.html" class=" btn-hover">Xem thêm</a>
+                <a href="{{URL('/product')}}" class=" btn-hover">Xem thêm</a>
             </div>
         </div>
 </div>

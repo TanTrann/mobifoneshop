@@ -249,8 +249,8 @@
             </a>
             <div class="collapse" id="serv">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="">Liệt kê</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Thêm</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{URL('/all-serv')}}">Liệt kê</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{URL('/add-serv')}}">Thêm</a></li>
               </ul>
             </div>
           </li>

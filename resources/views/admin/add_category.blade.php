@@ -29,7 +29,7 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label for="exampleInputEmail1">Mô tả danh mục</label>
-                          <textarea style="resize :none" rows="8" name="category_desc"  class="form-control"  > </textarea>
+                          <textarea style="resize :none" rows="8" name="category_desc"  class="form-control" id="ckeditor1" > </textarea>
                         </div>
                       </div>
                     </div>

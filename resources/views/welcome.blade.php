@@ -8,8 +8,7 @@
         <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
-   
-  <link rel="shortcut icon" href="{{asset('public/backend/images/favicon.png')}}" />
+        <link href="{{asset('public/backend/images/favicon.png')}}" rel="icon">
 
         <!-- Google Font -->
         <link href="{{asset('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap')}}" rel="stylesheet">
@@ -75,7 +74,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sản phẩm</a>
                             <div class="dropdown-menu">
                                 <a href="blog.html" class="dropdown-item">Sim</a>
-                                <a href="single.html" class="dropdown-item">Thiết bị di dộng</a>
+                                <a href="{{URL::to('/product')}}" class="dropdown-item">Thiết bị di dộng</a>
                             </div>
                         </div>
                         <a href="{{url('/team.html')}}" class="nav-item nav-link">Tin tức</a>
