@@ -44,11 +44,49 @@
                     </div>
                     <div class="col-md-6">
                         <div class="top-bar-right">
-                            <div class="social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+                           <!-- DANG KI -->
+                          
+                           <!-- END DANG KI -->
+                              <!--  DANG NHAP -->
+                            
+                                 @php
+                                    $customer_id = Session::get('customer_id');
+                                    if($customer_id!=NULL){ 
+                                    @endphp
+
+                                    
+                                        <a href="{{URL::to('history')}}" style="padding-right: 44px" >Lịch sử đơn hàng </a>
+
+                                    
+
+                                    
+                                   @php
+                                    }
+                                   @endphp
+
+                                <?php
+                                $customer_id = Session::get('customer_id');
+                                if($customer_id!=NULL){ 
+                                    ?>
+
+                                    
+                                        <a href="{{URL::to('/logout-checkout')}}"> Đăng xuất :
+
+                                        <img width="15%" src="{{Session::get('customer_picture')}}"> {{Session::get('customer_name')}} </a>
+
+                                   
+
+
+                                    <?php
+                                }else{
+                                   ?>
+                                   <a href="{{URL::to('/dang-nhap')}}"style="padding-right: 20px"><i class="fa fa-lock"></i> Đăng nhập</a>
+                                   <a href="{{URL::to('/dang-ky')}}"  > Đăng ký</a>
+                                   <?php 
+                               }
+                               ?>
+                            </a>
+                            <!-- END DANG NHAP -->
                             </div>
                         </div>
                     </div>
@@ -74,13 +112,13 @@
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sản phẩm</a>
                             <div class="dropdown-menu">
                                 <a href="blog.html" class="dropdown-item">Sim</a>
-                                <a href="{{URL::to('/product')}}" class="dropdown-item">Thiết bị di dộng</a>
+                                <a href="{{URL('/product')}}" class="dropdown-item">Thiết bị di dộng</a>
                             </div>
                         </div>
                         <a href="{{url('/team.html')}}" class="nav-item nav-link">Tin tức</a>
-                        <a href="{{url('/portfolio')}}" class="nav-item nav-link">Hổ trợ khách hàng</a>
-                       
                         <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
+                        
+                     
                     </div>
                 </div>
             </div>
