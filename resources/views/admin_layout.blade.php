@@ -177,6 +177,19 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#sli" aria-expanded="false" aria-controls="sli">
+              <i class="mdi mdi mdi-view-list menu-icon"></i>
+              <span class="menu-title">Slide</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="sli">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{URL::to('/manage-slider')}}">Liệt kê</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{URL::to('/add-slider')}}">Thêm</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="mdi mdi mdi-view-list menu-icon"></i>
               <span class="menu-title">Sản phẩm</span>

@@ -18,25 +18,24 @@
 
                     <!--Các slide bên trong carousel-inner-->
                     <div class="carousel-inner">
-
+                    @php 
+                            $i = 0;
+                        @endphp
+                        @foreach($slider as $key => $slide)
+                            @php 
+                                $i++;
+                            @endphp
                         <!--Slide 1 thiết lập hiện thị đầu tiên .active-->
                         <div class="carousel-item active">
-                            <img class="" src="public\frontend\img\picture1.png" style="width: 100%">
+                        <img alt="{{$slide->slider_desc}}" src="{{asset('public/uploads/slider/'.$slide->slider_image)}}"  style="height: 500px; width:100%">
                             <!--Cho thêm hiện thị thông tin-->
                             <div class="carousel-caption d-none d-md-block">
                                 <h5></h5>
                                 <p></p>
                             </div>
                         </div>
-
-                        <!--Slide 2-->
-                        <div class="carousel-item">
-                            <img class="" src="public\frontend\img\picture2.png" style="width: 100%">
-                        </div>
-                        <!--Slide 3-->
-                        <div class="carousel-item">
-                            <img class="" src="public\frontend\img\picture3.png" style="width: 100%">
-                        </div>
+                        @endforeach 
+                       
                     </div>
                     
 

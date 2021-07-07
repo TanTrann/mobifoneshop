@@ -114,3 +114,11 @@ Route::post('/add-customer','App\Http\Controllers\CheckoutController@add_custome
 Route::post('/login-customer','App\Http\Controllers\CheckoutController@login_customer');
 Route::get('/checkout','App\Http\Controllers\CheckoutController@checkout');
 Route::get('/logout-checkout','App\Http\Controllers\CheckoutController@logout_checkout');
+
+//Banner
+Route::get('/manage-slider','App\Http\Controllers\SliderController@manage_slider');
+Route::get('/add-slider','App\Http\Controllers\SliderController@add_slider');
+Route::get('/delete-slide/{slide_id}','App\Http\Controllers\SliderController@delete_slide');
+Route::post('/insert-slider','App\Http\Controllers\SliderController@insert_slider');
+Route::get('/unactive-slide/{slide_id}','App\Http\Controllers\SliderController@unactive_slide');
+Route::get('/active-slide/{slide_id}','App\Http\Controllers\SliderController@active_slide');
