@@ -1293,6 +1293,7 @@ a:focus {
 .single .table,
 .single .list-group {
     margin-bottom: 30px;
+    
 }
 
 .single .ul-group {
@@ -1797,5 +1798,94 @@ a:focus {
 
 ul.list-group {
     width: 300px;
-    margin-left: 190px;
+    margin-left: 17px;
+}
+
+/* slider */
+
+/* thiết lập style cho slideshow container */
+ .hero .slideshow-container {
+   max-width: 1000px;
+   position: relative;
+   margin: auto;
+ }
+/* ẩn hình ảnh cho phần tử slideshow */
+.hero .mySlides {
+    width: 1342px;
+    height: 100%;
+    margin-left: -232px;
+}
+/* thiết kế nút mũi tên*/
+.hero .prev, .next {
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   width: auto;
+   margin-top: -22px;
+   padding: 16px;
+   margin-left: -196px;
+
+   font-weight: bold;
+   font-size: 18px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+ }
+/* thiết kế nút mũi tên next nằm phía bên phải */
+.hero .next {
+    margin-right: -65px;
+   right: 0;
+   border-radius: 3px 0 0 3px;
+ }
+/* hiệu ứng thay đổi background khi hover vào nút mũi tên*/
+.hero .prev:hover, .next:hover {
+   background-color: rgba(0,0,0,0.8);
+ }
+/* Thiết lập style cho nội dung của mỗi phần tử slideshow */
+.hero .text {
+   color: #f2f2f2;
+   font-size: 15px;
+   padding: 8px 12px;
+   position: absolute;
+   bottom: 8px;
+   width: 100%;
+   text-align: center;
+ }
+/* Thiết lập style cho số hiển thị của phần tử */
+.hero .numbertext {
+   color: #f2f2f2;
+   font-size: 12px;
+   padding: 8px 12px;
+   position: absolute; 
+   top: 0;
+ }
+/* thiết lập style  nút tròn điều khiển*/
+
+
+/* tạo hiệu ứng chuyển động fade */
+.mySlides  {
+   -webkit-animation-name: hero;
+   -webkit-animation-duration: 1.5s;
+   animation-name: hero;
+   animation-duration: 1.5s;
+ }
+@-webkit-keyframes hero {
+   from {opacity: .4}
+   to {opacity: 1}
+ }
+@keyframes hero {
+   from {opacity: .4}
+   to {opacity: 1}
+ }
+
+
+
+ .product-list {
+    position: relative;
+    width: 129%;
+    display: flex;
+    top: -482px
+}
+.cate-brand-list {
+    padding-top: 37px;
 }

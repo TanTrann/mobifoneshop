@@ -15,7 +15,7 @@ class HomeController extends Controller
   //trang chu
   public function index(){
 	     //slide
-	 $slider = Slider::orderBy('slider_id','DESC')->where('slider_status','1')->take(4)->get();
+	$slider = Slider::orderBy('slider_id','DESC')->where('slider_status','1')->take(3)->get();
 	$all_product = DB::table('tbl_product')->orderby('product_id','desc')->limit(4)->get(); 
    	$cate_product = DB::table('tbl_category')->orderby('category_id','desc')->limit(4)->get(); 
 	$all_service = DB::table('tbl_service')->where('service_status','0')->orderby(DB::raw('RAND()'))->limit(4)->get(); 

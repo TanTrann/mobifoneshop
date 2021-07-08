@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-
+<div class="cate-brand-list">
         <ul class="list-group">
                             <li class="list-group-item">Danh mục sản phẩm</li>
                             	
@@ -30,16 +30,16 @@
                             @foreach($brand as $key => $brand)
                             <li class="list-group-item"><a href="{{URL::to('/thuong-hieu-san-pham/'.$brand->brand_id)}}"> {{$brand->brand_name}}</a></li>
                             @endforeach
-                        </ul>
-        <!-- Page Header End -->
-
- 
+        </ul>
+       
+        </div>
+  <!-- Page Header End -->
 
      <!-- product list -->
      <div class="product-list">
         <div class="container">
             <div class="section-header">
-                <h2>Điện thoại di động</h2>
+                <h4>Điện thoại di động</h4>
             </div>
             <div class="row" id="best-products">
 

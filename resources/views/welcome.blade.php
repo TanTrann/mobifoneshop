@@ -196,5 +196,8 @@
         <script src="{{asset('public/frontend/js/main.js')}}"></script>
         <script src="{{asset('public/frontend/js/app.js')}}"></script>
         <script src="{{asset('public/frontend/js/index.js')}}"></script>
+        <script src="{{asset('public/frontend/js/slider.js')}}"></script>
+        
+        
     </body>
 </html>
