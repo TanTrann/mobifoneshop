@@ -122,3 +122,7 @@ Route::get('/delete-slide/{slide_id}','App\Http\Controllers\SliderController@del
 Route::post('/insert-slider','App\Http\Controllers\SliderController@insert_slider');
 Route::get('/unactive-slide/{slide_id}','App\Http\Controllers\SliderController@unactive_slide');
 Route::get('/active-slide/{slide_id}','App\Http\Controllers\SliderController@active_slide');
+
+
+// chi tiet sp
+Route::get('/chi-tiet/{product_id}','App\Http\Controllers\ProductController@details_product');

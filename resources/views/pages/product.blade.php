@@ -54,7 +54,7 @@
                         </div>
                         <div class="product-card-info">
                             <div class="product-btn">
-                                <button class="btn-flat btn-hover btn-shop-now">Chi tiết</button>
+                            <button class="btn-flat btn-hover btn-shop-now"><a href="{{URL::to('/chi-tiet/'.$pro->product_id)}}">Chi tiết </a></button>
                                 <button class="btn-flat btn-hover btn-cart-add">
                                     <i class='bx bxs-cart-add'></i>
                                 </button>

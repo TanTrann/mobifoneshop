@@ -25,10 +25,15 @@
                     <i class="next" onclick="plusSlides(1)">❯</i>
                     </div>
                     <br>
-                    <!-- Nút tròn điều khiển slideshow-->
-                   
+                    </div>      
             </div>
-        </div>
+            <!-- Nút tròn điều khiển slideshow-->
+            <div class="dot-class" style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        
 
 
         <!-- Service Start -->
@@ -107,7 +112,8 @@
                                                         padding-bottom: 110px;">          
                                                         <h2 class="name">{{$serv->service_name}}</h2>     
                                                      {{--    <p>{!!$serv->service_content!!}</p> --}}
-                                                            <input type="button" value="Chi tiết" class="chitiet" data-id_product="{{$serv->service_id}}"  name="chi-tiet" > 
+                                                            <input type="button" value="Chi tiết" class="chitiet" data-id_product="{{$serv->service_id}}"  name="chi-tiet" >
+                                                             
                                                             </form>
                                             </div>
                                         </div>
@@ -135,7 +141,7 @@
                     </div>
                     <div class="col-lg-7 col-md-6">
                         <div class="section-header text-left">
-                            <p>Gioi thieu mobifone</p>
+                            <p>Giới thiệu mobifone</p>
                             <h2>Lịch sử hình thành</h2>
                         </div>
                         <div class="about-text">
@@ -171,7 +177,7 @@
                         </div>
                         <div class="product-card-info">
                             <div class="product-btn">
-                                <button class="btn-flat btn-hover btn-shop-now">Chi tiết</button>
+                                <button class="btn-flat btn-hover btn-shop-now"><a href="{{URL::to('/chi-tiet/'.$pro->product_id)}}">Chi tiết </a></button>
                                 <button class="btn-flat btn-hover btn-cart-add">
                                     <i class='bx bxs-cart-add'></i>
                                 </button>

@@ -1860,7 +1860,19 @@ ul.list-group {
    top: 0;
  }
 /* thiết lập style  nút tròn điều khiển*/
-
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+ .mySlides .active, .dot:hover {
+    background-color: #717171;
+  }
 
 /* tạo hiệu ứng chuyển động fade */
 .mySlides  {
@@ -1888,4 +1900,39 @@ ul.list-group {
 }
 .cate-brand-list {
     padding-top: 37px;
+}
+
+.dot-class {
+    margin-top: -73px;
+    position: relative;
+    padding-bottom: 54px;
+}
+
+.view-product img{
+
+    width: 437px;
+    margin-left: 100px;
+}
+
+
+div#similar-product {
+    margin-left: 95px;
+    text-align: center;
+    font-size: 76px;
+}
+.product-information {
+    margin-left: 700px;
+    position: absolute;
+    top: -516px;
+}
+
+
+/* details */
+.category-tab.shop-details-tab {
+    width: 1261px;
+    padding-left: 86px;
+}
+ .col-sm-12 li {
+    margin-left: 83px;
+        top: -516px;
 }
