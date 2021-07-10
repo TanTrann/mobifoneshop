@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 04, 2021 at 09:37 AM
+-- Generation Time: Jul 10, 2021 at 09:32 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -67,7 +67,12 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (11, '2021_06_22_123227_create_tbl_service', 8),
 (12, '2021_06_23_075929_create_tbl_data_service', 9),
 (13, '2021_06_24_092726_create_tbl_call_service', 10),
-(14, '2021_06_24_161842_create_tbl_service', 11);
+(14, '2021_06_24_161842_create_tbl_service', 11),
+(15, '2021_07_04_130122_create_tbl_customer', 12),
+(16, '2021_07_04_132847_create_tbl_customers', 13),
+(17, '2021_07_07_034859_create_tbl_slider', 14),
+(18, '2021_07_07_035937_create_tbl_slider', 15),
+(19, '2021_07_10_062507_create_tbl_sim', 16);
 
 -- --------------------------------------------------------
 
@@ -180,6 +185,30 @@ INSERT INTO `tbl_category` (`category_id`, `category_name`, `category_desc`, `ca
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_customers`
+--
+
+CREATE TABLE `tbl_customers` (
+  `customer_id` int(10) UNSIGNED NOT NULL,
+  `customer_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `customer_email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `customer_password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `customer_phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tbl_customers`
+--
+
+INSERT INTO `tbl_customers` (`customer_id`, `customer_name`, `customer_email`, `customer_password`, `customer_phone`, `created_at`, `updated_at`) VALUES
+(1, 'thaa', 'tantranstst@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '+84986340387', NULL, NULL),
+(2, 'tan', 'tantranstst@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '12345', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_data_service`
 --
 
@@ -263,6 +292,55 @@ INSERT INTO `tbl_service` (`service_id`, `service_name`, `service_images`, `serv
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_sim`
+--
+
+CREATE TABLE `tbl_sim` (
+  `sim_id` int(10) UNSIGNED NOT NULL,
+  `sim_number` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sim_price` float NOT NULL,
+  `sim_desc` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sim_status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tbl_sim`
+--
+
+INSERT INTO `tbl_sim` (`sim_id`, `sim_number`, `sim_price`, `sim_desc`, `sim_status`, `created_at`, `updated_at`) VALUES
+(1, '0483728444', 200000, 'Thoi gian: ko gioi han\r\nTai khoan hien co : 100.000vnc', 0, NULL, NULL),
+(2, '0483728432', 200000, 'sadavàvbàb', 0, NULL, NULL),
+(3, '034782829', 200000, 'sadvfd', 0, NULL, NULL),
+(4, '047583322', 150000, 'dfljdsafva', 0, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_slider`
+--
+
+CREATE TABLE `tbl_slider` (
+  `slider_id` int(10) UNSIGNED NOT NULL,
+  `slider_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slider_status` int(11) NOT NULL,
+  `slider_image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slider_desc` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tbl_slider`
+--
+
+INSERT INTO `tbl_slider` (`slider_id`, `slider_name`, `slider_status`, `slider_image`, `slider_desc`) VALUES
+(2, 'banner1', 1, 'IMG_20200504_17425191.jpg', '123'),
+(3, 'banner2', 1, 'sale_800x45033.jpg', 'ád'),
+(4, 'banner3', 1, 'slider-2-min2-257.png', '123');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -325,6 +403,12 @@ ALTER TABLE `tbl_category`
   ADD PRIMARY KEY (`category_id`);
 
 --
+-- Indexes for table `tbl_customers`
+--
+ALTER TABLE `tbl_customers`
+  ADD PRIMARY KEY (`customer_id`);
+
+--
 -- Indexes for table `tbl_data_service`
 --
 ALTER TABLE `tbl_data_service`
@@ -341,6 +425,18 @@ ALTER TABLE `tbl_product`
 --
 ALTER TABLE `tbl_service`
   ADD PRIMARY KEY (`service_id`);
+
+--
+-- Indexes for table `tbl_sim`
+--
+ALTER TABLE `tbl_sim`
+  ADD PRIMARY KEY (`sim_id`);
+
+--
+-- Indexes for table `tbl_slider`
+--
+ALTER TABLE `tbl_slider`
+  ADD PRIMARY KEY (`slider_id`);
 
 --
 -- Indexes for table `users`
@@ -363,7 +459,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `tbl_admin`
@@ -390,6 +486,12 @@ ALTER TABLE `tbl_category`
   MODIFY `category_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `tbl_customers`
+--
+ALTER TABLE `tbl_customers`
+  MODIFY `customer_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `tbl_data_service`
 --
 ALTER TABLE `tbl_data_service`
@@ -406,6 +508,18 @@ ALTER TABLE `tbl_product`
 --
 ALTER TABLE `tbl_service`
   MODIFY `service_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `tbl_sim`
+--
+ALTER TABLE `tbl_sim`
+  MODIFY `sim_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tbl_slider`
+--
+ALTER TABLE `tbl_slider`
+  MODIFY `slider_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
