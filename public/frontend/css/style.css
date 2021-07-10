@@ -780,6 +780,7 @@ a:focus {
     margin-bottom: 30px;
     background: rgba(29, 36, 52, .04);
     transition: .3s;
+    margin-right: 61px;
 }
 
 .price .price-item:hover {
@@ -803,14 +804,13 @@ a:focus {
     bottom: 10px;
     left: 10px;
     background: transparent;
-    border: 1px solid #ffffff;
     z-index: 1;
 }
 
 .price .price-text {
     position: relative;
     padding: 0 15px;
-    width: calc(100% - 100px);
+    width: 130px;
     overflow: hidden;
 }
 
@@ -829,7 +829,9 @@ a:focus {
     font-weight: 400;
     color: #333333;
 }
-
+.sim-list {
+    display: flex;
+}
 
 /*******************************/
 /*********** Team CSS **********/

@@ -96,6 +96,21 @@ Route::get('/delete-call-service/{call_service_id}','App\Http\Controllers\CallSe
 Route::get('/unactive-call-service/{call_service_id}','App\Http\Controllers\CallServiceController@unactive_call_service');
 Route::get('/active-call-service/{call_service_id}','App\Http\Controllers\CallServiceController@active_call_service');
 
+//backend + sim
+Route::get('/add-sim','App\Http\Controllers\SimController@add_sim');
+Route::get('/all-sim','App\Http\Controllers\SimController@all_sim');
+Route::get('/edit-sim/{sim_id}','App\Http\Controllers\SimController@edit_sim');
+Route::post('/save-sim','App\Http\Controllers\SimController@save_sim');
+Route::post('/update-sim/{sim_id}','App\Http\Controllers\SimController@update_sim');
+Route::get('/delete-sim/{sim_id}','App\Http\Controllers\SimController@delete_sim');
+
+Route::get('/unactive-sim/{sim_id}','App\Http\Controllers\SimController@unactive_sim');
+Route::get('/active-sim/{sim_id}','App\Http\Controllers\SimController@active_sim');
+
+
+
+
+
 //frontend + product
 
 Route::get('/product','App\Http\Controllers\productController@product');
