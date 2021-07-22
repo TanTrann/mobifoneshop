@@ -543,14 +543,9 @@ a:focus {
 /******* Section Header ********/
 /*******************************/
 .section-header {
+    padding-top: 179px;
     text-align: center;
-    position: relative;
-    max-width: 600px;
-    margin: 0 auto;
-    margin-bottom: 45px;
-    padding-top: 70px;
 }
-
 .section-header p {
     margin-bottom: 5px;
     position: relative;
@@ -1530,13 +1525,36 @@ a:focus {
 }
 
 .product-card-img {
-    margin-bottom: 52px
-    height: 300px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 41px;
+    margin-left: 11px;
 }
+
+ .product-card .product-card-img {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 41px;
+    width: 200px;
+    margin-left: 93px;
+    padding-top: 10px;
+}
+#best-product  .product-card-img {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 41px;
+    margin-left: 11px;
+    width: 194px;
+    margin-left: 97px;
+    padding-top: 10px;
+}
+
 
 .product-card-img img {
     max-height: 100%;
@@ -1588,6 +1606,11 @@ a:focus {
     transform: translateY(0);
 }
 
+.product-pages:hover .product-btn {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 .btn-shop-now,
 .btn-cart-add {
     font-size: 15px;
@@ -1637,6 +1660,7 @@ a:focus {
 
 
 .product-img {
+    margin-left: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1788,13 +1812,13 @@ a:focus {
 
 /* end - .product */
 .all-product {
-    margin-left: 12px;
+    display: flex;
 }
 
 .all-product .product-card {
     text-align: center;
     float: left;
-    padding: 0 27px;
+    padding: 0px 20px
 }
 
 
@@ -1896,9 +1920,10 @@ ul.list-group {
 
  .product-list {
     position: relative;
-    width: 129%;
+    width: 76%;
     display: flex;
-    top: -482px
+    top: -482px;
+    margin-left: 313px;
 }
 .cate-brand-list {
     padding-top: 37px;
@@ -1937,4 +1962,9 @@ div#similar-product {
  .col-sm-12 li {
     margin-left: 83px;
         top: -516px;
+}
+
+td.description {
+    padding-right: 249px;
+    
 }

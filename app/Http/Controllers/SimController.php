@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\http\Requests;
 use Session;
+use App\Sim;
 use Illuminate\support\facades\redirect;
 session_start();
 
@@ -88,4 +89,29 @@ public function all_sim (){
     }
 
     //end admin
+
+    public function sim(){       	
+        
+        $all_sim = DB::table('tbl_sim')->where('sim_status','0')->orderby('sim_id','desc')->get();
+        $category = DB::table('tbl_category')->where('category_status','0')->orderby('category_id','desc')->get();
+        	
+        $brand = DB::table('tbl_brand')->where('brand_status','0')->orderby('brand_id','desc')->get();
+        
+        
+    
+        return view ('pages.sim.sim_list')->with('all_sim',$all_sim)->with('category',$category)->with('brand',$brand);
+}
+
+public function quickviewsim(Request $request){
+
+    $sim_id = $request->sim_id;
+    $sim = Sim::find($sim_id);
+    $output['sim_number'] = $sim->sim_number;
+    $output['sim_id'] = $sim->sim_id;
+    $output['sim_desc'] = $sim->sim_desc;
+    $output['sim_price'] = number_format($sim->sim_price,0,',','.').'VNĐ';
+     echo json_encode($output);
+   
+
+}
 }
